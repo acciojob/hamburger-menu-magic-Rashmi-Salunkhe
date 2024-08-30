@@ -1,1 +1,80 @@
 /*  your css code here. If applicable */
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        position: absolute;
+        top: 60px; /* Adjust based on your layout */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+}
