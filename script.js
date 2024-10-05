@@ -1,10 +1,9 @@
-//your JS code here. If required.
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("ham");
+    const navLinks = document.querySelector(".nav-sub");
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    hamburger.addEventListener("click", function() {
+        navLinks.classList.toggle("show");
+        hamburger.classList.toggle("open");
     });
 });
